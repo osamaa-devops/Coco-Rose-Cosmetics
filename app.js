@@ -8,6 +8,7 @@ const products = [
         description: "اسبراي مضاد للتساقط ومحفز لإنبات الشعر، غني بالمستخلصات العشبية والزيوت الطبيعية، يعمل على ترميم وترطيب وتنشيط فروة الرأس.",
         price: 170,
         image: "images/optimized/Hair_tonic_spray.webp",
+        url: "hair-tonic-spray/",
         category: "hair",
         size: "220 ml",
         details: [
@@ -26,6 +27,7 @@ const products = [
         description: "شامبو لطيف وخالي من السلفات القاسية، ينظف الشعر بعمق مع الحفاظ على نعومته وصحة فروة الرأس.",
         price: 120,
         image: "images/optimized/sulfate_shampoo.webp",
+        url: "free-sulfate-shampoo/",
         category: "hair",
         size: "220 ml",
         details: [
@@ -43,6 +45,7 @@ const products = [
         description: "كريم مرطب ومغذي يُترك على الشعر بدون شطف، غني بزبدة الشيا والهيالورونيك أسيد وزيت نخالة الأرز.",
         price: 250,
         image: "images/optimized/Leave_in_cream.webp",
+        url: "leave-in-cream/",
         category: "hair",
         size: "220 g",
         details: [
@@ -182,6 +185,10 @@ function renderProducts(productsToRender = [...products, ...bundles]) {
                     <i class="fas fa-cart-plus"></i>
                     أضف للسلة
                 </button>
+                ${product.url ? `
+                <a href="${product.url}" class="product-link-btn">
+                    تفاصيل المنتج
+                </a>` : ''}
             </div>
         </div>
     `;
